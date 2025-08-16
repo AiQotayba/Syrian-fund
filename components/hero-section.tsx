@@ -10,7 +10,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
           style={{
             minWidth: "100%",
-            minHeight: "100%",
+            minHeight: "90%",
             transform: "scale(1.1)", // لإخفاء الحدود السوداء
           }}
           allow="autoplay; encrypted-media"
