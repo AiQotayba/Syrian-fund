@@ -1,0 +1,165 @@
+/* تحسينات الفيديو للهيرو */
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    width: auto;
+    max-width: none;
+    aspect-ratio: 1000/633;
+    /* الأبعاد المحددة */
+    object-fit: cover;
+}
+
+/* تحسينات للتجاوب مع الشاشات المختلفة */
+@media (max-width: 480px) {
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hero-video {
+        /* الحفاظ على نسب الأبعاد الأصلية للشاشات الكبيرة */
+        aspect-ratio: 1000/633;
+        /* الأبعاد المحددة */
+        min-height: 100vh;
+        width: auto;
+    }
+}
+
+/* تحسينات خاصة للشاشات العريضة */
+@media (min-width: 1440px) {
+    .hero-video {
+        aspect-ratio: 1000/633;
+        /* الأبعاد المحددة */
+        min-height: 100vh;
+        width: auto;
+    }
+}
+
+/* تحسينات للشاشات العمودية */
+@media (orientation: portrait) {
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: auto;
+    }
+}
+
+/* تحسينات للشاشات الأفقية */
+@media (orientation: landscape) {
+    .hero-video {
+        aspect-ratio: 1000/633;
+        /* الأبعاد المحددة */
+        min-height: 100vh;
+        width: auto;
+    }
+}
+
+/* تحسينات خاصة للشاشات الصغيرة جداً */
+@media (max-width: 320px) {
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: auto;
+    }
+}
+
+/* تحسينات للشاشات الكبيرة جداً */
+@media (min-width: 1920px) {
+    .hero-video {
+        aspect-ratio: 1000/633;
+        /* الأبعاد المحددة */
+        min-height: 100vh;
+        width: auto;
+    }
+}
+
+/* تحسينات خاصة لعنصر iframe - قياسات مضبوطة من 1 إلى 5 */
+iframe.hero-video {
+    border: none;
+    outline: none;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    /* القياس الأساسي */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: opacity 2s ease-in-out;
+}
+
+/* تحسينات للأداء على الأجهزة المحمولة */
+@media (max-width: 768px) {
+    iframe.hero-video {
+        will-change: transform;
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+/* قياسات scale من 1 إلى 5 مع media queries مضبوطة */
+
+/* القياس 1 - الشاشات الكبيرة جداً */
+@media (min-width: 2560px) {
+    iframe.hero-video {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* القياس 2 - الشاشات الكبيرة */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    iframe.hero-video {
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+/* القياس 3 - الشاشات المتوسطة */
+@media (min-width: 1024px) and (max-width: 1919px) {
+    iframe.hero-video {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* القياس 4 - الشاشات الصغيرة */
+@media (min-width: 768px) and (max-width: 1023px) {
+    iframe.hero-video {
+        transform: translate(-50%, -50%) scale(4);
+    }
+}
+
+/* القياس 5 - الشاشات الصغيرة جداً */
+@media (max-width: 767px) {
+    iframe.hero-video {
+        transform: translate(-50%, -50%) scale(5);
+    }
+}

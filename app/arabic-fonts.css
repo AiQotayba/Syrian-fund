@@ -1,0 +1,109 @@
+/* تحسينات إضافية للخطوط العربية */
+
+/* تحسين عرض الحروف العربية */
+.arabic-text {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* تحسين المسافات بين الحروف العربية */
+.font-arabic {
+  letter-spacing: 0.01em;
+  word-spacing: 0.05em;
+}
+
+/* تحسين عرض الأرقام العربية */
+.arabic-numbers {
+  font-feature-settings: "tnum" 1;
+}
+
+/* تحسين عرض علامات الترقيم */
+.arabic-punctuation {
+  font-feature-settings: "pnum" 1;
+}
+
+/* تحسين عرض النصوص الطويلة */
+.arabic-long-text {
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* تحسين عرض العناوين */
+.arabic-heading {
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+/* تحسين عرض النصوص الصغيرة */
+.arabic-small {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* تحسين عرض النصوص الكبيرة */
+.arabic-large {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* تحسين عرض النصوص في الأزرار */
+.arabic-button {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* تحسين عرض النصوص في الروابط */
+.arabic-link {
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.arabic-link:hover {
+  color: #10b981;
+}
+
+/* تحسين عرض النصوص في القوائم */
+.arabic-list {
+  line-height: 1.7;
+  padding-right: 1.5rem;
+}
+
+/* تحسين عرض النصوص في الجداول */
+.arabic-table {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* تحسين عرض النصوص في النماذج */
+.arabic-form {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* تحسين عرض النصوص في التنبيهات */
+.arabic-alert {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* تحسين عرض النصوص في البطاقات */
+.arabic-card {
+  line-height: 1.6;
+}
+
+/* تحسين عرض النصوص في الشريط الجانبي */
+.arabic-sidebar {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* تحسين عرض النصوص في التذييل */
+.arabic-footer {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
