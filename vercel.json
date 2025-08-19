@@ -1,0 +1,13 @@
+{
+    "headers": [
+        {
+            "source": "/videos/(.*).(ts|m3u8|mp4)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, s-maxage=31536000, immutable"
+                }
+            ]
+        }
+    ]
+}

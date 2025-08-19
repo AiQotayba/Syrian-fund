@@ -12,16 +12,16 @@ function FooterContent() {
   let logo: any = Number(searchParams.get("logo"))
   if (isNaN(logo)) logo = 2
 
-  const Color = ["[#9d926d]", "[#2c4940]", "white"]
+  const Color = ["", "[#9d926d]", "[#2c4940]", "white"]
   const bgColor = Color[color]
   let text
-  if (color == 2) text = `text-${Color[1]}`
-  else if (color == 1) text = `text-${Color[2]}`
-  else text = `text-${Color[2]}`
+  if (color == 3) text = `text-[${Color[1]}]`
+  else text = `text-${Color[3]}`
 
   const logos = [
-    "logo-1.png",
+    "",
     "logo-2.png",
+    // "logo-1.png",
     "logo-3.png",
     "logo-4.png",
     "logo-5.png",
@@ -34,8 +34,8 @@ function FooterContent() {
   ]
   /*
     ?color=1&logo=2
-    logo = 0-10 لتغيير الشعار في الفوتر
-    color = 0-2 لتغيير لون الخلفية في الفوتر
+    logo = 1-9 لتغيير الشعار في الفوتر
+    color = 1-3 لتغيير لون الخلفية في الفوتر
   */
   console.log(logos[logo], text, bgColor);
 
@@ -69,7 +69,7 @@ function FooterContent() {
           </div>
         </div>
 
-        <div className={`border-t border-${Color[color]}/30 mt-12 pt-8 text-center ${text}`}>
+        <div className={`border-t border-${bgColor}/30 mt-12 pt-8 text-center ${text}`}>
           <p className={`font-arabic font-normal ${text} text-lg`}>جميع الحقوق محفوظة للصندوق السيادي السوري © 2025</p>
         </div>
       </div>
