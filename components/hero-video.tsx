@@ -29,7 +29,7 @@ export default function HeroVideo() {
             />
             <div className={cn(
                 `video-overlay absolute inset-0 bg-[#2c4940] z-10 transition-opacity duration-1000 ease-in-out`,
-                'opacity-90'
+                'opacity-[0.95]'
             )}></div>
         </>
     );
