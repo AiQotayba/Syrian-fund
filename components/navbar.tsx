@@ -10,9 +10,9 @@ export default function Navbar() {
       // "bg-gradient-to-t from-transparent to-[#9d926d]/10 backdrop-blur-sm"
     )}>
       <div className="container mx-auto px-4 py-4 max-w-[1632px] md:px-12">
-        <div className="flex justify-start items-center">
-          {/* لوغو الصندوق في اليمين */}
-          <Link href={"/"} className="flex items-center">
+        <div className="flex justify-between items-center">
+          {/* لوغو الصندوق */}
+          <Link href={"/"} className="flex items-center max-w-[150px] md:max-w-[500px]">
             <Image
               src="/logos/logo-5.png"
               alt="الصندوق السيادي السوري"
@@ -23,6 +23,13 @@ export default function Navbar() {
               priority
             />
           </Link>
+          
+          {/* Under Construction Text */}
+          <div className="text-white text-center md:text-right">
+            <h1 className="text-xs md:text-lg font-normal font-arabic">
+              Under construction
+            </h1>
+          </div>
         </div>
       </div>
     </nav>

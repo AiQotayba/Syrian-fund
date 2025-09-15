@@ -13,17 +13,7 @@ export default function HeroContent() {
                     className="w-full h-full object-contain drop-shadow-2xl"
                     priority
                 />
-            </div>
-
-            {/* اسم الصندوق بالعربية */}
-            <h1 className="font-arabic max-w-[295px] md:max-w-[481px] text-2xl md:text-[40px] font-medium text-[#9d926d] mb-4">
-                الصندوق السيادي السوري
-            </h1>
-
-            {/* اسم الصندوق بالإنجليزية */}
-            <h2 className="font-sans max-w-[295px] md:max-w-[481px] text-2xl md:text-[40px] font-normal text-[#9d926d]">
-                Syrian Sovereign Fund
-            </h2>
+            </div> 
         </div>
     )
 }
