@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
-import { cn } from "@/lib/utils";
 
 export default function HeroVideo() {
     const hlsRef = useRef<Hls | null>(null);
@@ -17,7 +16,7 @@ export default function HeroVideo() {
         }
 
         const path = isMobile ? "/videos/mobile/hero" : "/videos/desktop/hero";
-        
+
         if (Hls.isSupported()) {
             const hls = new Hls();
             hlsRef.current = hls;
@@ -43,7 +42,7 @@ export default function HeroVideo() {
         // Handle window resize
         const handleResize = () => {
             const newIsMobile = window.innerWidth < 768;
-            
+
             // Only reload if the mobile/desktop state actually changed
             if (newIsMobile !== currentIsMobile) {
                 currentIsMobile = newIsMobile;
