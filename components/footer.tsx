@@ -8,7 +8,7 @@ function FooterContent() {
         <div className="flex flex-col md:flex-col justify-between items-start ">
           {/* Contact Section */}
           <h3 className="font-arabic font-medium text-base md:text-xl mb-6 text-[#28473B]">تواصل معنا:</h3>
-          <div className="flex flex-col lg:flex-row justify-between items-start w-full *:w-full">
+          <div className="flex flex-col lg:flex-row gap-4 justify-between items-start w-full *:w-full">
             <div className="text-right space-y-6 order-2">
               <div className="space-y-2">
                 {[
